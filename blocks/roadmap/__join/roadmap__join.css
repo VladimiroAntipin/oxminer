@@ -1,0 +1,22 @@
+.roadmap__join {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    background-color: white;
+    -webkit-box-shadow: 12px 15px 5px 1px rgba(34, 60, 80, 0.22);
+    -moz-box-shadow: 12px 15px 5px 1px rgba(34, 60, 80, 0.22);
+    box-shadow: 12px 15px 5px 1px rgba(34, 60, 80, 0.22);
+    border-radius: 10px;
+    margin-bottom: 120px;
+}
+
+@media screen and (max-width:800px) {
+    .roadmap__join {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 0px;
+    }
+  }

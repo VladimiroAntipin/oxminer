@@ -1,0 +1,38 @@
+.roadmap__link {
+  width: 25%;
+  height: 40px;
+  padding: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(167, 207, 73);
+  font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(45, 51, 123);
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  opacity: 1;
+  transition: 0.2s linear;
+}
+
+.roadmap__link:hover {
+  opacity: 0.8;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width:650px) {
+  .roadmap__link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .roadmap__link {
+    font-size: 10px;
+    margin-right: 0px;
+    width: 30%;
+  }
+}

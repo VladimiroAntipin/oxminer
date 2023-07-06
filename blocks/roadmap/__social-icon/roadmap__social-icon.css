@@ -1,0 +1,15 @@
+.roadmap__social-icon {
+    width: 25px;
+}
+
+@media screen and (max-width:650px) {
+    .roadmap__social-icon {
+        width: 20px;
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    .roadmap__social-icon {
+        width: 16px;
+    }
+  }

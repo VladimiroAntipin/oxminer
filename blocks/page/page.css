@@ -1,0 +1,10 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/bcg-block1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
