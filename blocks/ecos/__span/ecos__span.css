@@ -1,0 +1,11 @@
+.ecos__span {
+    font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+@media screen and (max-width:500px) {
+    .ecos__span {
+        font-size: 17px;
+    }
+  }

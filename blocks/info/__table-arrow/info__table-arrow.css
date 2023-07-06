@@ -1,0 +1,11 @@
+.info__table-arrow {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:1000px) {
+    .info__table-arrow {
+        display: none;
+    }
+  }

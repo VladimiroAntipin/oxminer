@@ -1,0 +1,11 @@
+.ecos__card-section-img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+@media screen and (max-width:950px) {
+    .ecos__card-section-img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+  }

@@ -1,0 +1,28 @@
+.header__hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .header__hamburger {
+        display: block;
+        position: fixed;
+        top:30px;
+        right: 20px;
+    }
+
+    .header__hamburger.active .header__hamburger-line:nth-child(2) {
+       opacity: 0;
+    }
+
+    .header__hamburger.active .header__hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+     }
+
+     .header__hamburger.active .header__hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+     }
+
+
+
+  }

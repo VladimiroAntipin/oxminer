@@ -1,0 +1,27 @@
+.ecos__img-bull {
+    width: 80%;
+    margin-top: -30px;
+    margin-left: 100px;
+}
+
+@media screen and (max-width:950px) {
+    .ecos__img-bull {
+        width: 80%;
+        margin-top: -30px;
+        margin-left: 70px;
+    }
+  }
+
+  @media screen and (max-width:700px) {
+    .ecos__img-bull {
+        width: 60%;
+        margin-top: -150px;
+        margin-left: 250px;
+    }
+  }
+
+  @media screen and (max-width:530px) {
+    .ecos__img-bull {
+        margin-left: 200px;
+    }
+  }

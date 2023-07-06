@@ -1,0 +1,17 @@
+.info__img {
+    max-width: 400px;
+    margin-top: -80px;
+}
+
+@media screen and (max-width:1000px) {
+    .info__img {
+        margin-top: -10px;
+        max-width: 360px;
+    }
+  }
+
+@media screen and (max-width:850px) {
+    .info__img {
+        display: none;
+    }
+  }

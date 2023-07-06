@@ -1,0 +1,15 @@
+.ecos__mark {
+    font-size: 40px;
+    font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(62, 65, 162);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin: 25px;
+}
+
+@media screen and (max-width:800px) {
+    .ecos__mark {
+      display: none;
+    }
+  }

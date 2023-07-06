@@ -1,0 +1,25 @@
+.info__text-yellow {
+    color: rgb(245,223,79);
+    font-weight: 700;
+    font-size: 25px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+}
+
+@media screen and (max-width:1000px) {
+    .info__text-yellow {
+        font-size: 21px;
+    }
+  }
+
+  @media screen and (max-width:850px) {
+    .info__text-yellow {
+        font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width:550px) {
+    .info__text-yellow {
+        font-size: 20px;
+    }
+  }
