@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Gotham';
+  font-style: bold;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./Gotham-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./Gotham-Light.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: light;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Gotham-XLight.otf") format("otf");
+}
