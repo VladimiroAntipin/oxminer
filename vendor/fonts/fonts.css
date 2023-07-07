@@ -1,23 +1,29 @@
 @font-face {
-  font-family: 'Gotham';
-  font-style: bold;
+  font-family: "Gotham";
+  src: url('./Gotham-Book.woff') format('woff'),
+       url('./Gotham-Book.woff2') format('woff2'),
+       url('./Gotham-Book.ttf') format('truetype');
+  font-weight: bold;
+  font-display: swap;
   font-weight: 900;
-  font-display: swap;
-  src: url("./Gotham-Bold.otf") format("otf");
 }
 
 @font-face {
-  font-family: 'Gotham';
-  font-style: normal;
+  font-family: "Gotham";
+  src: url('./Gotham-Book.woff') format('woff'),
+       url('./Gotham-Book.woff2') format('woff2'),
+       url('./Gotham-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
   font-weight: 600;
-  font-display: swap;
-  src: url("./Gotham-Light.otf") format("otf");
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-style: light;
-  font-weight: 400;
+  font-family: "Gotham";
+  src: url('./Gotham-Book.woff') format('woff'),
+       url('./Gotham-Book.woff2') format('woff2'),
+       url('./Gotham-Book.ttf') format('truetype');
+  font-weight: lighter;
   font-display: swap;
-  src: url("./Gotham-XLight.otf") format("otf");
+  font-weight: 400;
 }
