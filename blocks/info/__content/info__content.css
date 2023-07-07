@@ -23,6 +23,24 @@
     }
   }
 
+  @media screen and (max-width:500px) {
+    .info__content { 
+        margin-top: 230px;
+    }
+  }
+
+  @media screen and (max-width:460px) {
+    .info__content { 
+        margin-top: 280px;
+    }
+  }
+
+  @media screen and (max-width:431px) {
+    .info__content { 
+        margin-top: 200px;
+    }
+  }
+
 
 
   
