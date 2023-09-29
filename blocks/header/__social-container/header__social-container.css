@@ -1,11 +1,25 @@
 .header__social-container {
-    width: 80px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+@media screen and (max-width:1024px) {
+    .header__social-container {
+       width: 80px;
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    .header__social-container {
+       width: 70px;
+    }
+  }
 
 @media screen and (max-width:800px) {
     .header__social-container {
         margin-top: 20px;
+        width: 100px;
     }
   }

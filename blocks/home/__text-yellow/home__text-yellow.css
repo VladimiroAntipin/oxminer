@@ -23,7 +23,7 @@
     }
   }
 
-  @media screen and (max-width:620px) {
+  @media screen and (max-width:650px) {
     .home__text-yellow {
         font-size: 18px;
     }

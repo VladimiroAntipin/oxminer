@@ -4,7 +4,7 @@
     opacity: 1;
     transition: 0.2s linear;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -13,6 +13,12 @@
     transition: 0.2s linear;
     cursor: pointer;
 }
+
+@media screen and (max-width:1200px) {
+    .header__link {
+        font-size: 12px;
+    }
+  }
 
 @media screen and (max-width:950px) {
     .header__link {

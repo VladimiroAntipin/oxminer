@@ -1,12 +1,13 @@
 .footer__logo-wrap {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 10%;
 }
 
 @media screen and (max-width:1080px) {
     .footer__logo-wrap {
         width: 100%;
+        justify-content: center;
     }
   }
 
