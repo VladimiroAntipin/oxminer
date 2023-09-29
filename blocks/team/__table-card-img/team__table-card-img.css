@@ -2,4 +2,6 @@
     margin-top: 10px;
     width: 90%;
     object-fit: contain;
+    border: 10px solid rgb(45, 51, 123);
+    border-radius: 50px;
 }
