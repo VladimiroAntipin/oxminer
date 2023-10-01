@@ -1,0 +1,8 @@
+.terms {
+    margin-top: -50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
