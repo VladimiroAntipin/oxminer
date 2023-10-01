@@ -1,5 +1,5 @@
 .home__text {
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 1.2px;
     color: white;
     margin-bottom: 0px;
@@ -14,12 +14,12 @@
 
   @media screen and (max-width:830px) {
     .home__text {
-        font-size: 50px;
+        font-size: 30px;
     }
   }
 
   @media screen and (max-width:430px) {
     .home__text {
-        font-size: 40px;
+        font-size: 20px;
     }
   }

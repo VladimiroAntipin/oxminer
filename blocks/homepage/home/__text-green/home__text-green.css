@@ -1,6 +1,6 @@
 .home__text-green {
     margin-top: 0px;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 1.2px;
     color: rgb(188,214,89);
     font-weight: 800;
@@ -14,12 +14,12 @@
 
   @media screen and (max-width:830px) {
     .home__text-green {
-        font-size: 40px;
+        font-size: 30px;
     }
   }
 
   @media screen and (max-width:430px) {
     .home__text-green {
-        font-size: 30px;
+        font-size: 20px;
     }
   }
