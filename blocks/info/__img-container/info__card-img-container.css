@@ -1,8 +1,0 @@
-.info__card-img-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    margin-top: -60px;
-}
