@@ -1,0 +1,18 @@
+.ecos__text {
+    font-weight: 600;
+    font-size: 25px;
+    font-style: bold;
+    color: rgb(45, 51, 123);
+}
+
+@media screen and (max-width:950px) {
+    .ecos__text {
+        font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width:700px) {
+    .ecos__text {
+        font-size: 25px;
+    }
+  }

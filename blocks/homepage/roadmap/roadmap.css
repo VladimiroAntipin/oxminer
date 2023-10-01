@@ -1,0 +1,10 @@
+.roadmap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(178, 211, 92);
+    background: linear-gradient(0deg, rgba(178, 211, 92, 1) 73%, rgba(255, 255, 255, 1) 92%);
+    margin-top: -10px;
+    z-index: -2;
+}

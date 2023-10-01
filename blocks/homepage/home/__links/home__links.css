@@ -1,0 +1,39 @@
+.home__links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+    width: 75%;
+}
+
+@media screen and (max-width:1540px) {
+    .home__links {
+        width: 85%;
+    }
+  }
+
+  @media screen and (max-width:1370px) {
+    .home__links {
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .home__links {
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    .home__links {
+        gap: 5px;
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width:720px) {
+    .home__links {
+        width: 100%;
+    }
+  }

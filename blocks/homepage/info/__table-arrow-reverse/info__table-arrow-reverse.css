@@ -1,0 +1,13 @@
+.info__table-arrow-reverse {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    transform: rotate(180deg) scaleX(-1);
+    align-self: flex-end;
+}
+
+@media screen and (max-width:1000px) {
+    .info__table-arrow-reverse {
+        display: none;
+    }
+  }

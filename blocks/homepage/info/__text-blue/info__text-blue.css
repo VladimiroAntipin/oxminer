@@ -1,0 +1,24 @@
+.info__text-blue {
+    font-weight: 700;
+    font-size: 20px;
+    font-style: bold;
+    color: rgb(178,181,226);
+}
+
+@media screen and (max-width:1000px) {
+    .info__text-blue {
+        font-size: 19px;
+    }
+  }
+
+  @media screen and (max-width:850px) {
+    .info__text-blue {
+        font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width:550px) {
+    .info__text-blue {
+        font-size: 19px;
+    }
+  }
