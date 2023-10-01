@@ -1,0 +1,9 @@
+.footer__legal-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-top: 1px solid rgb(86,93,178);
+}

@@ -1,0 +1,4 @@
+.footer__social-icon-container {
+    display: flex;
+    flex-direction: row;
+}
