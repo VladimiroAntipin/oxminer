@@ -142,3 +142,10 @@
 @import url(../blocks/notfound/notfound.css);
 @import url(../blocks/notfound/__title/notfound__title.css);
 @import url(../blocks/notfound/__link/notfound__link.css);
+
+/* DApp */
+@import url(../blocks/dapp/__links/dapp__links.css);
+@import url(../blocks/dapp/__link-yellow/dapp__link-yellow.css);
+@import url(../blocks/dapp/__link-green/dapp__link-green.css);
+@import url(../blocks/dapp/__button/dapp__button.css);
+@import url(../blocks/dapp/__img/dapp__img.css);
