@@ -1,0 +1,40 @@
+.dapp__links {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+    width: 75%;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width:1540px) {
+    .dapp__links {
+        width: 85%;
+    }
+  }
+
+  @media screen and (max-width:1370px) {
+    .dapp__links {
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .dapp__links {
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    .dapp__links {
+        gap: 5px;
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width:720px) {
+    .dapp__links {
+        width: 100%;
+    }
+  }

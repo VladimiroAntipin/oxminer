@@ -1,0 +1,21 @@
+.dapp__img {
+    width: 30%;
+  }
+
+  @media screen and (max-width:1000px) {
+    .dapp__img {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width:750px) {
+    .dapp__img {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    .dapp__img {
+      width: 90%;
+    }
+  }

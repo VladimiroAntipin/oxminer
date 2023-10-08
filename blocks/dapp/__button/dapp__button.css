@@ -1,0 +1,27 @@
+.dapp__button {
+    width: 32px;
+}
+
+@media screen and (max-width:1000px) {
+    .dapp__button {
+        width: 20px;
+    }
+  }
+
+  @media screen and (max-width:820px) {
+    .dapp__button {
+        width: 25px;
+    }
+  }
+
+  @media screen and (max-width:480px) {
+    .dapp__button {
+        width: 20px;
+    }
+  }
+
+  @media screen and (max-width:425px) {
+    .dapp__button {
+        width: 15px;
+    }
+  }
