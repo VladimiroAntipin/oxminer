@@ -7,6 +7,7 @@ import YouTube from "../../images/yt-icon.png";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 function AppHeader() {
     const [showMenu, setShowMenu] = useState(false);
@@ -43,23 +44,23 @@ function AppHeader() {
                     <div className={navClass} onClick={toggleMenu}>
                         <ul className={headerStyle.header__linkscontainer}>
                             <li className={headerStyle.header__linkitem}>
-                                <a className={headerStyle.header__link} href="/#info" >About OxMiner</a>
+                                <NavHashLink className={headerStyle.header__link} to="/#info" >About OxMiner</NavHashLink>
                             </li>
                             <span className={headerStyle.header__line}>|</span>
                             <li className={headerStyle.header__linkitem}>
-                                <a className={headerStyle.header__link} href="/#why">Why OxMiner?</a>
+                                <NavHashLink className={headerStyle.header__link} to="/#why">Why OxMiner?</NavHashLink>
                             </li>
                             <span className={headerStyle.header__line}>|</span>
                             <li className={headerStyle.header__linkitem}>
-                                <a className={headerStyle.header__link} href="/#roadmap">Line-up</a>
+                                <NavHashLink className={headerStyle.header__link} to="/#roadmap">Line-up</NavHashLink>
                             </li>
                             <span className={headerStyle.header__line}>|</span>
                             <li className={headerStyle.header__linkitem}>
-                                <a className={headerStyle.header__link} href="/#team">Team</a>
+                                <NavHashLink className={headerStyle.header__link} to="/#team">Team</NavHashLink>
                             </li>
                             <span className={headerStyle.header__line}>|</span>
                             <li className={headerStyle.header__linkitem}>
-                                <a className={headerStyle.header__link} href="/#contacts">Contacts</a>
+                                <NavHashLink className={headerStyle.header__link} to="/#contacts">Contacts</NavHashLink>
                             </li>
                             <span className={headerStyle.header__line}>|</span>
                             <li className={headerStyle.header__linkitem}>
