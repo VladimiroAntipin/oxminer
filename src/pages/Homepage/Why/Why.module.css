@@ -1,0 +1,113 @@
+.why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    margin-top: -10px;
+    z-index: 1;
+}
+
+.why__content {
+    margin-top: 50px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.why__title {
+    font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 0px;
+    color: rgb(45, 51, 123);
+}
+
+.why__table {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    row-gap: 80px;
+}
+
+@media screen and (max-width:1000px) {
+    .why__table {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+        row-gap: 80px;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    .why__table {
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+  .why__tablecard {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247,247,247);
+    padding: 20px;
+    gap: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .why__tablecard {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        background-color: rgb(247,247,247);
+        padding: 20px;
+        gap: 20px;
+    }
+  }
+
+  .why__tablecardimgwrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+
+.why__tablecardimg {
+    margin-top: -80px;
+    width: 70%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.why__tablecardtextcontainer {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+}
+
+.why__tablecardtitle {
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    color: rgb(45, 51, 123);
+    text-align: center;
+}
+
+.why__tablecardtext {
+    font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    color: rgb(45, 51, 123);
+    text-align: center;
+}

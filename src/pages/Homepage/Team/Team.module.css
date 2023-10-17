@@ -1,0 +1,93 @@
+.team {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__content {
+    margin-top: 80px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.team__title {
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 0px;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.team__tablewrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.team__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 30px;
+}
+
+@media screen and (max-width:1080px) {
+    .team__table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:720px) {
+    .team__table {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.team__tablecard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.team__tablecardimg {
+    margin-top: 10px;
+    width: 90%;
+    object-fit: contain;
+    border: 10px solid rgb(45, 51, 123);
+    border-radius: 50px;
+}
+
+.team__tablecardtitle {
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 0px;
+    color: rgb(45, 51, 123);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.team__tablecardtext {
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 10px;
+    color: rgb(45, 51, 123);
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+.body {
+  width: 100vw;
+  background-color: rgb(61,69,156);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  background-color: rgb(61,69,156);
+}
+
+.page {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/bcg-block1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

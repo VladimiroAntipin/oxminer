@@ -1,0 +1,94 @@
+.roadmap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(178, 211, 92);
+    background: linear-gradient(0deg, rgba(178, 211, 92, 1) 73%, rgba(255, 255, 255, 1) 92%);
+    margin-top: -10px;
+    z-index: 2;
+}
+
+.roadmap__content {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.roadmap__title {
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 0px;
+    color: rgb(45, 51, 123);
+}
+
+.roadmap__text {
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 0px;
+    color: rgb(45, 51, 123);
+}
+
+.roadmap__tablewrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.roadmap__table {
+    margin-top: 80px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .roadmap__table {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.roadmap__tablecard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.roadmap__tablecardimg {
+    width: 180px;
+}
+
+@media screen and (max-width:600px) {
+    .roadmap__tablecardimg {
+        width: 140px;
+    }
+}
+
+.roadmap__tablecardtitle {
+    width: 250px;
+    font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: bold;
+    letter-spacing: 1.2px;
+    margin-top: 0px;
+    color: rgb(45, 51, 123);
+}
+
+@media screen and (max-width:600px) {
+    .roadmap__tablecardtitle {
+        font-size: 22px;
+    }
+}

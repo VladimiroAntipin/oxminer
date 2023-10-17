@@ -1,0 +1,219 @@
+.ecos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(245, 223, 79);
+  background: linear-gradient(180deg, rgba(245, 223, 79, 1) 73%, rgba(255, 255, 255, 1) 92%);
+}
+
+.ecos__content {
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media screen and (max-width:700px) {
+  .ecos__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.ecos__textcontainer {
+  font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 40%;
+}
+
+@media screen and (max-width:950px) {
+  .ecos__textcontainer {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .ecos__textcontainer {
+    width: 90%;
+  }
+}
+
+.ecos__title {
+  font-weight: 900;
+  font-size: 30px;
+  font-style: bold;
+  letter-spacing: 1.2px;
+  margin-top: 0px;
+  color: rgb(45, 51, 123);
+}
+
+@media screen and (max-width:950px) {
+  .ecos__title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .ecos__title {
+    font-size: 30px;
+  }
+}
+
+.ecos__text {
+  font-weight: 600;
+  font-size: 25px;
+  font-style: bold;
+  color: rgb(45, 51, 123);
+}
+
+@media screen and (max-width:950px) {
+  .ecos__text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .ecos__text {
+    font-size: 25px;
+  }
+}
+
+.ecos__textsmall {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(45, 51, 123);
+}
+
+@media screen and (max-width:950px) {
+  .ecos__textsmall {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .ecos__textsmall {
+    font-size: 18px;
+  }
+}
+
+.ecos__textsmallspan {
+  font-weight: 600;
+  color: rgb(45, 51, 123);
+}
+
+.ecos__img {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.ecos__cardcontainer {
+  background: rgb(253, 237, 121);
+  background: linear-gradient(180deg, rgba(253, 237, 121, 1) 19%, rgba(255, 255, 255, 0) 0100%);
+  font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width:700px) {
+  .ecos__cardcontainer {
+    margin-top: 60px;
+    width: 90%;
+  }
+}
+
+.ecos__cardsection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin-left: 20px;
+}
+
+@media screen and (max-width:950px) {
+  .ecos__cardsection {
+    margin-left: 20px;
+  }
+}
+
+.ecos__cardsectionimg {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+@media screen and (max-width:950px) {
+  .ecos__cardsectionimg {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
+.ecos__cardsectiontext {
+  color: rgb(45, 51, 123);
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width:950px) {
+  .ecos__cardsectiontext {
+    font-size: 13px;
+  }
+}
+
+.ecos__cardsectionspan {
+  color: rgb(45, 51, 123);
+  font-weight: 600;
+  font-size: 20px;
+  font-style: bold;
+}
+
+@media screen and (max-width:950px) {
+  .ecos__cardsectionspan {
+    font-size: 16px;
+  }
+}
+
+.ecos__imgbull {
+  width: 80%;
+  margin-top: -30px;
+  margin-left: 100px;
+}
+
+@media screen and (max-width:950px) {
+  .ecos__imgbull {
+    width: 80%;
+    margin-top: -30px;
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .ecos__imgbull {
+    width: 60%;
+    margin-top: -150px;
+    margin-left: 250px;
+  }
+}
+
+@media screen and (max-width:530px) {
+  .ecos__imgbull {
+    margin-left: 240px;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .ecos__imgbull {
+    margin-left: 210px;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .ecos__imgbull {
+    margin-left: 200px;
+  }
+}
