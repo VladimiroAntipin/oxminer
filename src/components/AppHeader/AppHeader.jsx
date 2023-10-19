@@ -8,6 +8,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import "@rainbow-me/rainbowkit/styles.css";
 
 function AppHeader() {
     const [showMenu, setShowMenu] = useState(false);
@@ -74,8 +76,10 @@ function AppHeader() {
                             <li className={headerStyle.header__linkitem}>
                                 <NavLink className={headerStyle.header__link} to="/Gen1NFT" onClick={scrollToTopInstant}>Gen 1 NFT</NavLink>
                             </li>
+                            <li className={headerStyle.header__linkitem}>
+                                <ConnectButton accountStatus="address" />
+                            </li>
                         </ul>
-
                         <div className={headerStyle.header__socialcontainer}>
                             <Link className={headerStyle.header__social} to="https://discord.com/" target="_blank" >
                                 <img className={headerStyle.header__socialicon} src={Discord} alt="Discord" />
@@ -89,7 +93,9 @@ function AppHeader() {
                             <Link className={headerStyle.header__social} to="https://www.youtube.com/@OXMinerDeFi" target="_blank" >
                                 <img className={headerStyle.header__socialicon} src={YouTube} alt="YouTube" />
                             </Link>
+
                         </div>
+
 
                     </div>
                 </nav>

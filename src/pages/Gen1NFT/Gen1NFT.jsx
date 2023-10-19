@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AppStyle from "../../components/App/App.module.css";
 import Style from "./Gen1NFT.module.css";
 import Logo from "../../images/ox-bulls-logo.png";
@@ -5,21 +6,180 @@ import BullBig from "../../images/bull-big.png";
 import NFTPreview from "../../images/nfts-preview.png";
 import Tick from "../../images/tick-icon.png";
 import { useState } from "react";
-import Wallet from "../../images/wallet-icon.png";
+//import Wallet from "../../images/wallet-icon.png";
+import {
+    usePrepareContractWrite,
+    useContractWrite,
+    useWaitForTransaction,
+    useContractRead,
+} from "wagmi";
+import { useBalance } from 'wagmi'
+
+import { useToast } from "@chakra-ui/react";
+import Web3 from "web3";
+import { CONTRACT_ADDRESS } from "../../contract/contract";
+import { abi } from "../../contract/abi";
+import { useAccount, useDisconnect } from 'wagmi'
+import { CButton } from "./ConnectButton";
 
 function Gen1NFT() {
-    const [isWalletConnected, setIsWalletConnected] = useState(false);
-    const [counter, setCounter] = useState(0);
-
+    const [counter, setCounter] = useState(1);
+    const { isConnected, address } = useAccount();
     const increase = () => {
-        setCounter(count => count + 1);
+        setCounter(count => count < MAX_COUNT ? count + 1 : count);
     };
+    const MAX_COUNT = 9;
+
+    const toast = useToast();
+    const [mintBalance, setMintBalance] = useState(0);
+    const [maxSupply, setMaxSupply] = useState(0)
+    const [price, setPrice] = useState("0")
+    const [txStatus, setTxStatus] = useState('idle');
+    const { disconnect } = useDisconnect()
+    const { data: balancedata } = useBalance({
+        address: address,
+    })
+
+    useEffect(() => {
+        if (!isConnected) {
+            const fetchTotalSupplyUsingInfura = async () => {
+                const infuraURL = `https://mainnet.infura.io/v3/5dfb566a37304417851c084860c1f737`;
+                const web3 = new Web3(infuraURL);
+                const contract = new web3.eth.Contract(abi, CONTRACT_ADDRESS);
+                try {
+                    const supply = await contract.methods.totalSupply().call();
+                    setMintBalance(Number(supply));
+
+                    const mintPrice = await contract.methods.paymentAmount().call();
+                    setPrice(String(mintPrice));
+                } catch (err) {
+                    console.error("Failed to fetch data using Infura:", err);
+                }
+            };
+
+            fetchTotalSupplyUsingInfura();
+        }
+    }, [isConnected]);
+
 
     const decrease = () => {
         if (counter > 0) {
             setCounter(count => count - 1);
         }
     };
+
+    const { data: response, refetch: refetchProjects } = useContractRead({
+        address: CONTRACT_ADDRESS,
+        abi: abi,
+        functionName: "totalSupply",
+        args: [],
+        onError: (error) => {
+            console.log("Error", error);
+        },
+        onSuccess: (result) => {
+            if (!isNaN(Number(response))) {
+                setMintBalance(Number(response));
+            }
+        },
+    });
+
+
+    const { data: response2, refetch: refetchProjects2 } = useContractRead({
+        address: CONTRACT_ADDRESS,
+        abi: abi,
+        functionName: "maxSupply",
+        args: [],
+        onError: (error) => {
+            console.log("Error", error);
+        },
+        onSuccess: (result) => {
+            if (!isNaN(Number(response2))) {
+                setMaxSupply(Number(response2));
+            }
+        },
+    });
+
+    const { data: response3, refetch: refetchProjects3 } = useContractRead({
+        address: CONTRACT_ADDRESS,
+        abi: abi,
+        functionName: "paymentAmount",
+        args: [],
+        onError: (error) => {
+            console.log("Error", error);
+        },
+        onSuccess: (result) => {
+            if (!isNaN(Number(response3))) {
+                setPrice(String(response3));
+            }
+        },
+    });
+
+    const { config } = usePrepareContractWrite({
+        address: CONTRACT_ADDRESS,
+        abi: abi,
+        functionName: "buy",
+        args: [counter],
+        value: price * counter,
+        onError: (error) => {
+            console.log("Error", error);
+            if (isConnected) {
+                refetchProjects?.();
+                refetchProjects2?.();
+                refetchProjects3?.();
+            }
+        },
+        onSuccess: (result) => {
+            console.log("Success", result);
+        },
+    });
+
+    const { data, write, error } = useContractWrite(config);
+    const { isSuccess } = useWaitForTransaction({ hash: data?.hash });
+
+    useEffect(() => {
+        if (isConnected) {
+            refetchProjects?.();
+            refetchProjects2?.();
+            refetchProjects3?.();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [price, mintBalance, maxSupply, isConnected]);
+
+
+    useEffect(() => {
+        if (isSuccess) {
+            toast({
+                title: "NFT Minted",
+                description: "Your OxBull NFT has been minted successfully",
+                status: "success",
+                duration: 5000,
+                isClosable: true,
+            });
+        }
+        if (error) {
+            toast({
+                title: "Error",
+                description: "There was an error minting this token: " + error.message,
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+                zindex: 9999,
+            });
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isSuccess, error]);
+
+    useEffect(() => {
+        if (data?.hash) {
+            setTxStatus('pending');
+        }
+        if (isSuccess) {
+            setTxStatus('success');
+        }
+        if (error) {
+            setTxStatus('error');
+        }
+    }, [data, isSuccess, error]);
 
     return (
         <>
@@ -35,14 +195,14 @@ function Gen1NFT() {
                                 <div className={Style.nft__boxContainer}>
                                     <div className={Style.nft__textContainer}>
 
-                                        {isWalletConnected ?
+                                        {isConnected ?
                                             <>
                                                 <div className={Style.nft__textsWrapperConnected}>
 
                                                     <div className={Style.nft__headerConnected}>
                                                         <div className={Style.nft__headerTextContainerConnected}>
-                                                            <p className={Style.nft__walletNumberConnected}>•&nbsp;0x000d0e0000w0w0w</p>
-                                                            <p className={Style.nft__walletBalanceConnected}>14,67 ETH Available</p>
+                                                            <p className={Style.nft__walletNumberConnected}>•{address?.slice(0, 2) + '...' + address?.slice(-5)}</p>
+                                                            <p className={Style.nft__walletBalanceConnected}>{(parseFloat(balancedata?.formatted).toFixed(2))} {balancedata?.symbol} Available</p>
                                                         </div>
                                                     </div>
 
@@ -50,20 +210,20 @@ function Gen1NFT() {
 
                                                         <div className={Style.nft__mintTitleContainerConnected}>
                                                             <h1 className={Style.nft__mintTitleConnected}>Mint OxBull</h1>
-                                                            <button className={Style.nft__disconnectBtnConnected} onClick={() => setIsWalletConnected(false)}>disconnect</button>
+                                                            <button className={Style.nft__disconnectBtnConnected} onClick={() => disconnect()}>disconnect</button>
                                                         </div>
 
                                                         <div className={Style.nft__mintTextContainerConnected}>
                                                             <div className={Style.nft__mintTextWrapperConnected}>
-                                                                <p className={Style.nft__mintTextConnected}>Mint price: <span className={Style.nft__mintCost}>1 OxBull = 1.5 ETH</span></p>
-                                                                <p className={Style.nft__mintTextConnected}>Collection Size: 530</p>
+                                                                <p className={Style.nft__mintTextConnected}>Mint price: <span className={Style.nft__mintCost}>1 OxBull = {price / 1e18} ETH</span></p>
+                                                                <p className={Style.nft__mintTextConnected}>Collection Size: {maxSupply}</p>
                                                                 <p className={Style.nft__mintTextConnected}>Limits: none</p>
                                                             </div>
                                                         </div>
 
                                                         <div className={Style.nft__counterContainerConnected}>
                                                             <div className={Style.nft__counterTextConnected}>
-                                                                <p className={Style.nft__textConnected}>Amount of NFTs</p>
+                                                                <p className={Style.nft__textConnected}>NFTs</p>
                                                             </div>
 
                                                             <div className={Style.nft__counterConnected}>
@@ -80,10 +240,21 @@ function Gen1NFT() {
                                                     </div>
                                                 </div>
 
-                                                <p className={Style.nft__mintTextConnectedCount}>Mint price: <span className={Style.nft__mintSpanGreenConnected}>{(counter) * 1.5} ETH</span></p>
+                                                <p className={Style.nft__mintTextConnectedCount}>Mint price: <span className={Style.nft__mintSpanGreenConnected}>{(counter) * price / 1e18} ETH</span></p>
 
-                                                <div className={Style.nft__walletContainer}>
-                                                    <p className={Style.nft__walletText}>MINT</p>
+                                                <div className={Style.nft__walletContainer} onClick={() => {
+                                                    write?.();
+                                                    setTxStatus('pending')
+                                                }}>
+                                                    <p className={Style.nft__walletText}>
+                                                        {txStatus === 'pending' && isConnected
+                                                            ? "Pending..."
+                                                            : txStatus === 'error'
+                                                                ? "Error occurred!"
+                                                                : isConnected
+                                                                    ? "MINT"
+                                                                    : "not connected"
+                                                        }</p>
                                                 </div>
 
                                             </>
@@ -97,7 +268,7 @@ function Gen1NFT() {
 
                                                     <div className={Style.nft__textsContainer}>
                                                         <img className={Style.nft__tick} src={Tick} alt="tick" />
-                                                        <span className={Style.nft__spanYellow}>530</span>
+                                                        <span className={Style.nft__spanYellow}>{maxSupply}</span>
                                                         <p className={Style.nft__yellowText}>&nbsp;Unique Founders NFTs</p>
                                                     </div>
 
@@ -129,20 +300,19 @@ function Gen1NFT() {
 
                                                 </div>
 
-                                                <p className={Style.nft__mintText}>Mint price: <span className={Style.nft__mintSpan}>1 OxBull = 1.5 ETH</span></p>
+                                                <p className={Style.nft__mintText}>Mint price: <span className={Style.nft__mintSpan}>1 OxBull = {price / 1e18} ETH</span></p>
 
-                                                <div className={Style.nft__walletContainer} onClick={() => setIsWalletConnected(true)}>
-                                                    <img className={Style.nft__walletImg} src={Wallet} alt="wallet" />
-                                                    <p className={Style.nft__walletText}>CONNECT WALLET</p>
-                                                </div>
 
+                                                <CButton />
+                                                {/*                              <img className={Style.nft__walletImg} src={Wallet} alt="wallet" />
+                                                <p className={Style.nft__walletText}>CONNECT WALLET</p> */}
                                             </>}
 
                                     </div>
 
                                     <div className={Style.nft__nftImgContainer}>
                                         <div className={Style.nft__mintCounterContainer}>
-                                            <p className={Style.nft__mintCounterText}>Minted <span className={Style.nft__mintSpanGreen}>30</span>/500</p>
+                                            <p className={Style.nft__mintCounterText}>Minted <span className={Style.nft__mintSpanGreen}>{mintBalance}</span>/{maxSupply}</p>
                                         </div>
                                         <img className={Style.nft__nftImg} src={NFTPreview} alt="NFT" />
                                     </div>
