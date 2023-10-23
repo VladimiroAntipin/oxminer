@@ -29,8 +29,7 @@ const App = () => {
   })
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [
-      mainnet,
-      avalancheFuji
+      mainnet
     ],
     [publicProvider()]
   );
