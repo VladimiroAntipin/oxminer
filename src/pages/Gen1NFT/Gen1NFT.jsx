@@ -304,8 +304,7 @@ function Gen1NFT() {
 
 
                                                 <CButton />
-                                                {/*                              <img className={Style.nft__walletImg} src={Wallet} alt="wallet" />
-                                                <p className={Style.nft__walletText}>CONNECT WALLET</p> */}
+                                                
                                             </>}
 
                                     </div>

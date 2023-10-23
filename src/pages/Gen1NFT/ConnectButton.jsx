@@ -12,7 +12,7 @@ const buttonStyle = {
 };
 
 const buttonHoverStyle = {
-    backgroundColor: '#e0e0e0'
+    backgroundColor: 'transparent'
 };
 
 
