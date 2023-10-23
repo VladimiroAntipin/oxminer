@@ -1,4 +1,4 @@
-import  HomePage  from "../../pages/Homepage/Homepage";
+import HomePage from "../../pages/Homepage/Homepage";
 import { Routes, Route } from "react-router-dom";
 import PrivacyPolicy from "../../pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "../../pages/Terms&Conditions/TermsAndConditions";
@@ -16,6 +16,7 @@ import NotFound from "../../pages/NotFound/NotFound";
 import Gen1NFT from "../../pages/Gen1NFT/Gen1NFT";
 
 function AppContent() {
+
     return (
         <>
             <Routes>

@@ -8,7 +8,6 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 
 function AppHeader() {
@@ -76,9 +75,7 @@ function AppHeader() {
                             <li className={headerStyle.header__linkitem}>
                                 <NavLink className={headerStyle.header__link} to="/Gen1NFT" onClick={scrollToTopInstant}>Gen 1 NFT</NavLink>
                             </li>
-                            <li className={headerStyle.header__linkitem}>
-                                <ConnectButton accountStatus="address" />
-                            </li>
+
                         </ul>
                         <div className={headerStyle.header__socialcontainer}>
                             <Link className={headerStyle.header__social} to="https://discord.com/" target="_blank" >

@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index:15;
 }
 
 .footer__content {
@@ -58,10 +59,10 @@
 
 .footer__text {
     font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 12px;
     font-style: bold;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
     margin-top: 0px;
     color: white;
     text-align: center;
@@ -105,6 +106,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .footer__social {
@@ -121,7 +123,6 @@
 
 .footer__socialicon {
     width: 25px;
-    padding-right: 10px;
 }
 
 .footer__legalcontainer {
@@ -136,7 +137,7 @@
 
 .footer__legaltext {
     font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 12px;
     font-style: bold;
     letter-spacing: 1.2px;

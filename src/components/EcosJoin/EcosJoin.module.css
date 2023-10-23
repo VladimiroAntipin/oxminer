@@ -39,7 +39,7 @@
 .ecos__jointext {
     font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
     margin: 0px;
     color: rgb(62, 65, 162);
 }
@@ -53,17 +53,17 @@
 .ecos__span {
     font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 @media screen and (max-width:500px) {
     .ecos__span {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 .ecos__link {
-    width: 25%;
+    width: 30%;
     height: 40px;
     padding: 10px;
     margin-right: 10px;
@@ -76,6 +76,7 @@
     font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(45, 51, 123);
     font-weight: 600;
+    text-decoration: none;
     letter-spacing: 1.2px;
     opacity: 1;
     transition: 0.2s linear;
@@ -87,17 +88,35 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:1150px) {
+    .ecos__link {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:930px) {
+    .ecos__link {
+        width: 33%;
+    }
+}
+
 @media screen and (max-width:650px) {
     .ecos__link {
         font-size: 12px;
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:560px) {
     .ecos__link {
         font-size: 10px;
         margin-right: 0px;
-        width: 30%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .ecos__link {
+        width: 45%;
     }
 }
 
