@@ -9,7 +9,7 @@ import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/
 import { ChakraProvider } from "@chakra-ui/react";
 import { configureChains, WagmiConfig } from 'wagmi';
 import { createConfig } from 'wagmi';
-import { avalancheFuji } from 'wagmi/chains';
+import { mainnet } from 'wagmi/chains';
 import { extendTheme } from '@chakra-ui/react'
 import { publicProvider } from 'wagmi/providers/public';
 import Aos from "aos";
@@ -28,7 +28,7 @@ const App = () => {
   })
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [
-      avalancheFuji
+      mainnet
     ],
     [publicProvider()]
   );
