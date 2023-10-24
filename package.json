@@ -1,7 +1,6 @@
 {
   "name": "ox-miner",
   "version": "0.1.0",
-  "homepage": "https://vladimiroantipin.github.io/OxApp/",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.5.5",
