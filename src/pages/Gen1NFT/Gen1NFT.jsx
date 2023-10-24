@@ -279,23 +279,23 @@ function Gen1NFT() {
 
                                                     <div className={Style.nft__textsContainer}>
                                                         <img className={Style.nft__tick} src={Tick} alt="tick" />
-                                                        <p className={Style.nft__yellowText}>Minimum estimated <span className={Style.nft__spanYellow}>ROI = 300%</span> in BTC</p>
+                                                        <p className={Style.nft__yellowText}>Estimated <span className={Style.nft__spanYellow}>ROI = 300%</span> in BTC</p>
                                                     </div>
 
                                                     <div className={Style.nft__textsContainer}>
                                                         <img className={Style.nft__tick} src={Tick} alt="tick" />
-                                                        <p className={Style.nft__text}>Profit share from all OxMiner products <br />
-                                                            <span className={Style.nft__spanWhite}>(Public Mining Farms, Liquid staking ...)</span></p>
+                                                        <p className={Style.nft__text}>Profit from all OxMiner offerings <br />
+                                                            <span className={Style.nft__spanWhite}>(e.g. Public Mining Farms, Liquid Staking)</span></p>
                                                     </div>
 
                                                     <div className={Style.nft__textsContainer}>
                                                         <img className={Style.nft__tick} src={Tick} alt="tick" />
-                                                        <p className={Style.nft__text}>Pre-Emption right for next utility collections</p>
+                                                        <p className={Style.nft__text}>Priority access to future utility collections</p>
                                                     </div>
 
                                                     <div className={Style.nft__textsContainer}>
                                                         <img className={Style.nft__tick} src={Tick} alt="tick" />
-                                                        <p className={Style.nft__text}>Profit share from next products launches</p>
+                                                        <p className={Style.nft__text}>Revenue share from upcoming product launches</p>
                                                     </div>
 
                                                 </div>
