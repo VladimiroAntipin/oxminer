@@ -21,6 +21,7 @@ import { CONTRACT_ADDRESS } from "../../contract/contract";
 import { abi } from "../../contract/abi";
 import { useAccount, useDisconnect } from 'wagmi'
 import { CButton } from "./ConnectButton";
+import BigNumber from 'bignumber.js';
 
 function Gen1NFT() {
     const [counter, setCounter] = useState(1);
@@ -28,7 +29,7 @@ function Gen1NFT() {
     const increase = () => {
         setCounter(count => count < MAX_COUNT ? count + 1 : count);
     };
-    const MAX_COUNT = 9;
+    const MAX_COUNT = 10;
 
     const toast = useToast();
     const [mintBalance, setMintBalance] = useState(0);
@@ -114,12 +115,14 @@ function Gen1NFT() {
         },
     });
 
+    const newval = new BigNumber(price).times(counter).toString();
+
     const { config } = usePrepareContractWrite({
         address: CONTRACT_ADDRESS,
         abi: abi,
         functionName: "buy",
         args: [counter],
-        value: price * counter,
+        value: newval,
         onError: (error) => {
             console.log("Error", error);
             if (isConnected) {
@@ -304,7 +307,7 @@ function Gen1NFT() {
 
 
                                                 <CButton />
-                                                
+
                                             </>}
 
                                     </div>
