@@ -5,11 +5,9 @@ import Telegram from "../../images/telegram-icon.png";
 import Twitter from "../../images/twitter-icon.png";
 import YouTube from "../../images/yt-icon.png";
 import { Link } from "react-router-dom";
+import scrollToTopInstant from "../../utils/scrollToTopInstant";
 
 function AppFooter() {
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    };
 
     return (
         <footer className={Style.footer} id="contacts">
@@ -44,8 +42,8 @@ function AppFooter() {
 
             </div>
             <div className={Style.footer__legalcontainer}>
-                <Link className={Style.footer__legaltext} to="/privacy-policy" onClick={scrollToTop}>Privacy Policy</Link>
-                <Link className={Style.footer__legaltext} to="/terms-and-conditions" onClick={scrollToTop}>Terms & Conditions</Link>
+                <Link className={Style.footer__legaltext} to="/privacy-policy" onClick={scrollToTopInstant}>Privacy Policy</Link>
+                <Link className={Style.footer__legaltext} to="/terms-and-conditions" onClick={scrollToTopInstant}>Terms & Conditions</Link>
             </div>
         </footer>
     )

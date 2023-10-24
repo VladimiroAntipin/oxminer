@@ -1,30 +1,25 @@
 import AppContent from "../AppContent/AppContent";
 import AppFooter from "../AppFooter/AppFooter";
 import AppHeader from "../AppHeader/AppHeader";
-import { BrowserRouter as Router } from "react-router-dom";
-import {
-  RainbowKitProvider,
-  getDefaultWallets,
-  connectorsForWallets,
-} from '@rainbow-me/rainbowkit';
+import { useEffect } from "react";
+import { HashRouter as Router } from "react-router-dom";
+import { RainbowKitProvider, getDefaultWallets, connectorsForWallets } from '@rainbow-me/rainbowkit';
 import { darkTheme } from "@rainbow-me/rainbowkit";
-import {
-  argentWallet,
-  trustWallet,
-  ledgerWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
 import { ChakraProvider } from "@chakra-ui/react";
 import { configureChains, WagmiConfig } from 'wagmi';
 import { createConfig } from 'wagmi';
-
-import {
-  //mainnet,
-  avalancheFuji
-} from 'wagmi/chains';
+import { mainnet } from 'wagmi/chains';
 import { extendTheme } from '@chakra-ui/react'
 import { publicProvider } from 'wagmi/providers/public';
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const App = () => {
+  useEffect(() => {
+    Aos.init();
+  }, [])
+
   const theme = extendTheme({
     fonts: {
       body: 'Poppins, system-ui, sans-serif',
@@ -33,8 +28,7 @@ const App = () => {
   })
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [
-      //mainnet,
-      avalancheFuji
+      mainnet
     ],
     [publicProvider()]
   );

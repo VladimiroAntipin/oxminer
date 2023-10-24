@@ -17,7 +17,33 @@
 }
 
 .terms__logo {
-    max-width: 300px;
+    max-width: 200px;
+}
+
+.terms__textContainer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  margin-top: 30px;
+}
+
+@media screen and (max-width:540px) {
+  .terms__textContainer {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .terms__textContainer {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width:390px) {
+  .terms__textContainer {
+    height: 50vh;
+  }
 }
 
 .terms__title {
@@ -26,7 +52,6 @@
     color: white;
     margin-bottom: 40px;
     font-weight: 800;
-    margin-top: 80px;
 }
 
 .terms__text {
@@ -80,8 +105,8 @@
   }
 
   .dapp__linkyellow {
-    width: 20%;
-    height: 50px;
+    width: 25%;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -98,6 +123,7 @@
     text-align: center;
     font-size: 20px;
     text-decoration: none;
+    
 }
 
 .dapp__linkyellow:hover {
@@ -115,7 +141,7 @@
 
   @media screen and (max-width:720px) {
     .dapp__linkyellow {
-       width: 20%;
+       width: 30%;
     }
   }
 
@@ -132,7 +158,7 @@
   }
 
   .dapp__button {
-    width: 32px;
+    width: 18px;
 }
 
 @media screen and (max-width:1000px) {
@@ -160,8 +186,8 @@
   }
 
   .dapp__linkgreen {
-    width: 20%;
-    height: 50px;
+    width: 25%;
+    height: 60px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -195,7 +221,7 @@
 
   @media screen and (max-width:720px) {
     .dapp__linkgreen {
-       width: 20%;
+       width: 30%;
     }
   }
 

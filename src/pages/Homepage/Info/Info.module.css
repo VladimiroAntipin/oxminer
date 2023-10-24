@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(61,69,156);
 }
 
 .info__content {
@@ -27,23 +28,29 @@
 
 @media screen and (max-width:830px) {
     .info__content {
-        margin-top: 280px;
+        margin-top: 210px;
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:540px) {
     .info__content {
-        margin-top: 230px;
+        margin-top: 160px;
     }
 }
 
 @media screen and (max-width:460px) {
     .info__content {
-        margin-top: 180px;
+        margin-top: 120px;
     }
 }
 
 @media screen and (max-width:431px) {
+    .info__content {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width:380px) {
     .info__content {
         margin-top: 150px;
     }
@@ -84,6 +91,7 @@
     font-style: bold;
     letter-spacing: 1.2px;
     color: white;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width:1000px) {
@@ -110,6 +118,7 @@
     font-size: 25px;
     font-style: bold;
     letter-spacing: 1.2px;
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width:1000px) {
@@ -135,6 +144,7 @@
     font-size: 20px;
     font-style: bold;
     color: rgb(178, 181, 226);
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width:1000px) {

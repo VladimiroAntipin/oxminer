@@ -1,6 +1,6 @@
 .home {
     margin-top: 50px;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,29 +8,11 @@
     align-items: center;
 }
 
-@media screen and (max-width:830px) {
-    .home {
-        margin-top: 180px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .home {
-        margin-top: 140px;
-    }
-}
-
-@media screen and (max-width:430px) {
-    .home {
-        margin-top: 40px;
-    }
-}
-
 .home__content {
     width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: 'Gotham','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -39,19 +21,31 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        margin-top: 180px;
+        margin-top: 380px;
     }
   }
 
   @media screen and (max-width:540px) {
     .home__content {
-        margin-top: 240px;
+        margin-top: 300px;
+    }
+  }
+
+  @media screen and (max-width:501px) {
+    .home__content {
+        margin-top: 450px;
+    }
+  }
+
+  @media screen and (max-width:430px) {
+    .home__content {
+        margin-top: 320px;
     }
   }
 
   @media screen and (max-width:380px) {
     .home__content {
-        margin-top: 300px;
+        margin-top: 440px;
     }
   }
 
@@ -60,12 +54,30 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    width: 50%;
+    width: 55%;
+}
+
+@media screen and (max-width:1025px) {
+  .home__textcontainer {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width:860px) {
+  .home__textcontainer {
+      width: 62%;
+  }
 }
 
 @media screen and (max-width:830px) {
     .home__textcontainer {
         width: 90%;
+    }
+  }
+
+@media screen and (max-width:830px) {
+    .home__textcontainer {
+        width: 100%;
     }
   }
 
@@ -100,35 +112,9 @@
     font-weight: 800;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1080px) {
     .home__text {
-        font-size: 40px;
-    }
-  }
-
-  @media screen and (max-width:830px) {
-    .home__text {
-        font-size: 30px;
-    }
-  }
-
-  @media screen and (max-width:430px) {
-    .home__text {
-        font-size: 20px;
-    }
-  }
-
-  .home__text {
-    font-size: 30px;
-    letter-spacing: 1.2px;
-    color: white;
-    margin-bottom: 0px;
-    font-weight: 800;
-}
-
-@media screen and (max-width:1000px) {
-    .home__text {
-        font-size: 40px;
+        font-size: 25px;
     }
   }
 
@@ -152,9 +138,9 @@
     font-weight: 800;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1080px) {
     .home__textgreen {
-        font-size: 30px;
+        font-size: 25px;
     }
   }
 
@@ -179,22 +165,16 @@
 
 .home__textyellow {
     color: rgb(245,244,79);
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 23px;
+    font-weight: 500;
     letter-spacing: 1.2px;
 }
 
 @media screen and (max-width:1230px) {
   .home__textyellow {
-      font-size: 23px;
+      font-size: 18px;
   }
 }
-
-@media screen and (max-width:1000px) {
-    .home__textyellow {
-        font-size: 16px;
-    }
-  }
 
   @media screen and (max-width:830px) {
     .home__textyellow {
@@ -232,18 +212,18 @@
     flex-direction: row;
     justify-content: space-between;
     gap:10px;
-    width: 75%;
+    width: 82%;
 }
 
-@media screen and (max-width:1540px) {
+@media screen and (max-width:1550px) {
     .home__links {
-        width: 85%;
+        width: 94%;
     }
   }
 
-  @media screen and (max-width:1370px) {
+  @media screen and (max-width:1380px) {
     .home__links {
-        width: 90%;
+        width: 99%;
     }
   }
 
@@ -253,22 +233,9 @@
     }
   }
 
-  @media screen and (max-width:1000px) {
-    .home__links {
-        gap: 5px;
-        width: 90%;
-    }
-  }
-
-  @media screen and (max-width:720px) {
-    .home__links {
-        width: 100%;
-    }
-  }
-
   .home__linkpurple {
-    width: 30%;
-    height: 50px;
+    width: 32%;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -283,7 +250,7 @@
     transition: 0.2s linear;
     padding: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -292,13 +259,6 @@
     transition: 0.2s linear;
     cursor: pointer;
 }
-
-@media screen and (max-width:1000px) {
-    .home__linkpurple {
-        font-size: 12px;
-        
-    }
-  }
 
   @media screen and (max-width:720px) {
     .home__linkpurple {
@@ -319,12 +279,12 @@
   }
 
   .home__socialicon {
-    width: 32px;
+    width: 22px;
 }
 
 @media screen and (max-width:1000px) {
     .home__socialicon {
-        width: 20px;
+        width: 18px;
     }
   }
 
@@ -347,8 +307,8 @@
   }
 
   .home__linkyellow {
-    width: 30%;
-    height: 50px;
+    width: 32%;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -363,7 +323,7 @@
     transition: 0.2s linear;
     padding: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -372,13 +332,6 @@
     transition: 0.2s linear;
     cursor: pointer;
 }
-
-@media screen and (max-width:1000px) {
-    .home__linkyellow {
-        font-size: 12px;
-        
-    }
-  }
 
   @media screen and (max-width:720px) {
     .home__linkyellow {
@@ -399,8 +352,8 @@
   }
 
   .home__linkgreen {
-    width: 30%;
-    height: 50px;
+    width: 32%;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -415,7 +368,7 @@
     transition: 0.2s linear;
     padding: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -424,13 +377,6 @@
     transition: 0.2s linear;
     cursor: pointer;
 }
-
-@media screen and (max-width:1000px) {
-    .home__linkgreen {
-        font-size: 12px;
-        
-    }
-  }
 
   @media screen and (max-width:720px) {
     .home__linkgreen {
@@ -451,26 +397,34 @@
   }
 
   .home__img {
-    max-width: 450px;
+    width: 35%;
     animation: bounce 3.5s infinite linear;
 }
 
-@media screen and (max-width:1000px) {
-    .home__img {
-        max-width: 400px;
-    }
-  }
-
   @media screen and (max-width:830px) {
     .home__img {
-        max-width: 450px;
+        width: 50%;
         margin-top: 20px;
+        margin-bottom: 100px;
     }
   }
 
   @media screen and (max-width:500px) {
     .home__img {
-        max-width: 350px;
+        margin-bottom: 250px;
+    }
+  }
+
+  @media screen and (max-width:430px) {
+    .home__img {
+      width: 70%;
+        margin-bottom: 250px;
+    }
+  }
+
+  @media screen and (max-width:380px) {
+    .home__img {
+        width: 80%;
     }
   }
 
