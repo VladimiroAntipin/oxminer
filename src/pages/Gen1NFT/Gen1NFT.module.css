@@ -715,6 +715,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width:530px) {
@@ -724,9 +725,9 @@
 }
 
 .nft__walletNumberConnected {
-  max-width: 70px;
+  max-width: 100px;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.2px;
   text-overflow: ellipsis;
@@ -754,7 +755,7 @@
 .nft__walletBalanceConnected {
   width: fit-content;
   color: rgb(164, 166, 218);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.2px;
 }

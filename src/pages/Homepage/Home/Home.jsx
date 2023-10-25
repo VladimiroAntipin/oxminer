@@ -62,21 +62,10 @@ function HomeSection() {
               Project Brief
             </a>
 
-            <button
-              className={[Style.home__linkgreen, "ml-onclick-form"].join(" ")}
-              ref={(e) => {
-                if (!e) return;
-                if (e.attributes.getNamedItem("onclick")) return;
-                e.setAttribute("onclick", 'window.ml("show", "sIV6lP", true);');
-              }}
+            <Link className={Style.home__linkgreen} to="/Gen1NFT"
             >
-              <img
-                className={Style.home__socialicon}
-                src={Email}
-                alt="Newsletter"
-              />
-              Join our newsletter
-            </button>
+              Mint OxBulls
+            </Link>
           </div>
         </div>
 
