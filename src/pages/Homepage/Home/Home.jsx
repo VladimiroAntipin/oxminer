@@ -3,7 +3,6 @@ import Style from "./Home.module.css";
 import Logo from "../../../images/logo-type-part.svg";
 import Arrow from "../../../images/arrow.svg";
 import Discord from "../../../images/discord-icon.png";
-import Email from "../../../images/mail-blue.png";
 import Bull from "../../../images/bull-in-mine-cart.png";
 import ScrollIcon from "../../../images/mouse-scroll-icon.png";
 import { Link } from "react-router-dom";
@@ -41,7 +40,7 @@ function HomeSection() {
           <div className={Style.home__links}>
             <Link
               className={Style.home__linkpurple}
-              to="https://discord.com/"
+              to="https://discord.com/invite/AzHAZESeZf"
               target="_blank"
             >
               <img

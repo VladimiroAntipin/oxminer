@@ -3,6 +3,7 @@ import Logo from "../../images/logo-type-part.svg";
 import Discord from "../../images/discord-icon.png";
 import Telegram from "../../images/telegram-icon.png";
 import Twitter from "../../images/twitter-icon.png";
+import LinkedIn from "../../images/linkedin-logo.png";
 import YouTube from "../../images/yt-icon.png";
 import { Link } from "react-router-dom";
 import scrollToTopInstant from "../../utils/scrollToTopInstant";
@@ -29,7 +30,7 @@ function AppFooter() {
                 <div className={Style.footer__socialcontainer}>
                     <p className={Style.footer__text}>Follow us:</p>
                     <div className={Style.footer__socialiconcontainer}>
-                        <Link className={Style.footer__social} to="https://discord.com/" target="_blank"><img className={Style.footer__socialicon} src={Discord}
+                        <Link className={Style.footer__social} to="https://discord.com/invite/AzHAZESeZf" target="_blank"><img className={Style.footer__socialicon} src={Discord}
                             alt="Discord" /></Link>
                         <Link className={Style.footer__social} to="https://t.me/OXMiner_news" target="_blank"><img className={Style.footer__socialicon} src={Telegram}
                             alt="Telegram" /></Link>
@@ -37,6 +38,8 @@ function AppFooter() {
                             alt="Twitter" /></Link>
                         <Link className={Style.footer__social} to="https://www.youtube.com/@OXMinerDeFi" target="_blank"><img className={Style.footer__socialicon} src={YouTube}
                             alt="YouTube" /></Link>
+                        <Link className={Style.footer__social} to="https://www.linkedin.com/company/oxminer-defi/" target="_blank"><img className={Style.footer__socialicon} src={LinkedIn}
+                            alt="LinkedIn" /></Link>
                     </div>
                 </div>
 

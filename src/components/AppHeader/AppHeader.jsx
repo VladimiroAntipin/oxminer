@@ -4,6 +4,7 @@ import Discord from "../../images/discord-icon.png";
 import Telegram from "../../images/telegram-icon.png";
 import Twitter from "../../images/twitter-icon.png";
 import YouTube from "../../images/yt-icon.png";
+import LinkedIn from "../../images/linkedin-logo.png";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -78,7 +79,7 @@ function AppHeader() {
 
                         </ul>
                         <div className={headerStyle.header__socialcontainer}>
-                            <Link className={headerStyle.header__social} to="https://discord.com/" target="_blank" >
+                            <Link className={headerStyle.header__social} to="https://discord.com/invite/AzHAZESeZf" target="_blank" >
                                 <img className={headerStyle.header__socialicon} src={Discord} alt="Discord" />
                             </Link>
                             <Link className={headerStyle.header__social} to="https://t.me/OXMiner_news" target="_blank" >
@@ -90,9 +91,11 @@ function AppHeader() {
                             <Link className={headerStyle.header__social} to="https://www.youtube.com/@OXMinerDeFi" target="_blank" >
                                 <img className={headerStyle.header__socialicon} src={YouTube} alt="YouTube" />
                             </Link>
+                            <Link className={headerStyle.header__social} to="https://www.linkedin.com/company/oxminer-defi/" target="_blank" >
+                                <img className={headerStyle.header__socialicon} src={LinkedIn} alt="LinkedIn" />
+                            </Link>
 
                         </div>
-
 
                     </div>
                 </nav>
