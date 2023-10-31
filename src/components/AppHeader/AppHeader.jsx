@@ -72,10 +72,6 @@ function AppHeader() {
                             <li className={headerStyle.header__linkitem}>
                                 <NavLink className={headerStyle.header__link} to="/DApp">DApp</NavLink>
                             </li>
-                            <span className={headerStyle.header__line}>|</span>
-                            <li className={headerStyle.header__linkitem}>
-                                <NavLink className={headerStyle.header__link} to="/Gen1NFT" onClick={scrollToTopInstant}>Gen 1 NFT</NavLink>
-                            </li>
 
                         </ul>
                         <div className={headerStyle.header__socialcontainer}>

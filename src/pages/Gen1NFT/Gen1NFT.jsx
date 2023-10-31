@@ -312,12 +312,12 @@ function Gen1NFT() {
 
                                     </div>
 
-                                    <div className={Style.nft__nftImgContainer}>
+{/*                                     <div className={Style.nft__nftImgContainer}>
                                         <div className={Style.nft__mintCounterContainer}>
                                             <p className={Style.nft__mintCounterText}>Minted <span className={Style.nft__mintSpanGreen}>{mintBalance}</span>/{maxSupply}</p>
                                         </div>
                                         <img className={Style.nft__nftImg} src={NFTPreview} alt="NFT" />
-                                    </div>
+                                    </div> */}
                                 </div>
 
                             </div>
