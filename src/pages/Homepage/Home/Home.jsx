@@ -61,10 +61,10 @@ function HomeSection() {
               Project Brief
             </a>
 
-            <Link className={Style.home__linkgreen} to="/Gen1NFT"
+{             <Link className={Style.home__linkgreen} to="/Gen1NFT"
             >
               Mint OxBulls
-            </Link>
+            </Link> }
           </div>
         </div>
 

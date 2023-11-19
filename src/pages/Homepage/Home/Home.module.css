@@ -212,7 +212,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap:10px;
-    width: 82%;
+    width: 60%;
 }
 
 @media screen and (max-width:1550px) {
@@ -227,14 +227,14 @@
     }
   }
 
-  @media screen and (max-width:1280px) {
+/*   @media screen and (max-width:1280px) {
     .home__links {
         width: 100%;
     }
-  }
+  } */
 
   .home__linkpurple {
-    width: 32%;
+    width: 50%;
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -307,7 +307,7 @@
   }
 
   .home__linkyellow {
-    width: 32%;
+    width: 50%;
     height: 70px;
     display: flex;
     flex-direction: row;
